@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>iQjax QUnit Test Suite</title>
+    <link rel="stylesheet" href="lib/qunit.css">
+  </head>
+
+  <body>
+    <h1 id="qunit-header">QUnit Test Suite</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture">
+
+      <div id="basic" data-iqjax-collection="#other-item-list">
+
+        <div data-iqjax-collection="#item-list">
+          <p><a href="/items/new" id="new" data-remote="true">New</a></p>
+          <ul id="item-list">
+            <li id="item1">
+              <a href="/items/1/edit" data-remote="true">Edit</a>
+            </li>
+            <li id="item2">
+              <a href="/items/2/edit" data-remote="true">Edit</a>
+            </li>
+            <li id="dummy-item-pointing-to-item3">
+              <a href="/items/3/edit" data-remote="true">Edit</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul id="other-item-list">
+          <li id="item3">Change me!</li>
+        </ul>
+
+      </div>
+
+      <div id="my-container1"></div>
+
+    </div>
+
+    <script src="lib/qunit.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="lib/jquery.mockjax.js"></script>
+
+    <script src="../vendor/jquery_ujs.js"></script>
+
+    <script src="../iqjax.js"></script>
+    <script src="tests.js"></script>
+  </body>
+
+</html>
