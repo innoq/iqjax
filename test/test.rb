@@ -24,16 +24,12 @@ class ClientTest < Test::Unit::TestCase
   end
 
   def test_client_side_test_suites
-    assert _run("iqjax.html")
+    assert _run("index.html")
   end
 
   def _run(suite)
-    path = File.dirname(__FILE__)
-    path = File.expand_path(path)
-    root = File.join(path, "..", "..")
-    root = File.expand_path(root, path)
-    basedir = File.join(root, "test", "client")
-    system("cd #{basedir} && phantomjs lib/run-qunit.js #{suite}")
+    path = File.expand_path(File.dirname(__FILE__))
+    system("cd #{path} && phantomjs lib/run-qunit.js #{suite}")
     return $?.success?
   end
 
