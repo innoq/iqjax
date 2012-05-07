@@ -1,2 +1,19 @@
 <h2>Content 3</h2>
-Last but not least: page 3
+
+<p>Hey, you've found a Form!</p>
+
+<form action="/mocked-post" method="POST" class="well" id="demoform">
+	<label>New content</label>
+	<input type="text" class="span3" placeholder="Type something…">
+	<button type="submit" class="btn">Submit</button>
+</form>
+
+<p>This form will send it's data to a resource mocked by 
+	<a href="https://github.com/appendto/jquery-mockjax">jQuery Mockjax</a>. 
+	The Mocked resource will return the following code:
+	
+	<pre>&lt;tr id="content1"&gt;&lt;td&gt;
+  {New content from the form above goes here}
+  [&lt;a href="content3.html" data-remote="true"&gt;Edit&lt;/a&gt;]
+&lt;/td&gt;&lt;/tr&gt;</pre>
+	

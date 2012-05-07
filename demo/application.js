@@ -4,7 +4,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,7 +17,23 @@ limitations under the License.
 
 	"use strict";
 
-	$("ul[data-iqjax]").iqjax();
+	$("[data-iqjax]").iqjax();
+
+	$.mockjax(function(settings) {
+		
+		var match = settings.url.match(/^\/mocked-post/);
+		if (match && settings.type == "POST") {
+			var txt = $("#demoform input[type=text]").val();
+			return {
+				responseTime: 10,
+				headers: {
+					"X-IQJAX": "content1"
+				},
+				responseText: '<tr id="content1"><td>' + txt +
+				' [<a href="content3.html" data-remote="true">Edit</a>]</td></tr>'
+			};
+		}
+		return;
+	});
 
 }(jQuery));
-
