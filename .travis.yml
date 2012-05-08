@@ -1,0 +1,10 @@
+rvm:
+  - 1.9.2
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    - till.schulte-coerne@innoq.com
