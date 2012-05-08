@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ['README.md', 'LICENSE']
 
   s.add_dependency "bundler"
-  s.add_dependency "railties", ">= 3.2.0", "< 5.0"
+  s.add_dependency "railties"
 
   s.files = %w(LICENSE README.md Rakefile iqjax.gemspec iqjax.js) + Dir.glob("{lib,vendor,test}/**/*")
   s.test_files = Dir.glob("{test}/**/*")
