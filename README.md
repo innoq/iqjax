@@ -24,12 +24,12 @@ Documentation
 
 We distinguish six API parts of ROCA-Style JavaScript components:
 
-# The socket HTML markup the component initializes upon,
-# the constructor method together with it's parameters,
-# methods callable upon the component,
-# events triggered by the component,
-# HTML markup the component generates and
-# Ajax-Requests the component fires.
+* The socket HTML markup the component initializes upon,
+* the constructor method together with it's parameters,
+* methods callable upon the component,
+* events triggered by the component,
+* HTML markup the component generates and
+* Ajax-Requests the component fires.
 
 ### Socket markup
 
